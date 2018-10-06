@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      CronoFucho
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+    <ion-item>
+      <p>
+          {{_minutos}}:{{_segundos}}.{{_centesimas}}
+      </p>
+    </ion-item>
+    <ion-item style="text-align: center">
+      <ion-grid>
+        <ion-row style="align-self: center">
+          <!--
+            <ion-col>
+                <ion-icon name="play" (click)="start()"></ion-icon>
+            </ion-col>
+          <ion-col >
+              <ion-icon name="pause" (click)="pause()"></ion-icon>
+          </ion-col>
+          -->
+
+
+          <ion-col>
+              <ion-icon [name]=estado (click)="estadoSwap()"></ion-icon>
+          </ion-col>
+
+          <ion-col >
+              <ion-icon [color]=refreshColor name="refresh" (click)="stop()"></ion-icon>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>
